@@ -13,7 +13,6 @@ body{
 
 
 #profile-main-img{
-    border: 4px solid black;
     width: 70px;
     height: 70px;
     border-radius: 50px;
@@ -80,19 +79,18 @@ font-weight: 600;
     display: grid;
     grid-template-columns: 3fr 2fr;
     padding-left: 50px;
-    box-shadow: 2px 2px 16px 1px #949499
 
 }
 
 #search-bar{
     grid-column: 1 / 3;
     display: grid;
-    grid-template-columns: 50px 3fr 60px 60px 220px;
+    grid-template-columns: 40px 3fr 60px 60px 220px;
     padding-top: 0.35rem;
 }
 
 #search-bar > img{
-    justify-self: center;
+    justify-self: start;
     align-self: center;
 
 }
@@ -118,7 +116,6 @@ font-weight: 600;
 }
 
 #profile-img {
-    border: 4px solid black;
     width: 50px;
     height: 50px;
     margin: 8px;
@@ -151,26 +148,43 @@ font-weight: 600;
     font-weight: 700;
 }
 
+#profile-img + h4{
+    font-weight: 700;
+}
+
 .header-btn{
     border-radius: 20px;
     width: 7.8rem;
     height: 2.7rem;
     align-self: center;
+    background-color: #1992d4;
+    color: #FFF;
+    border: 2px solid #FFF;
+    font-size: 1.05rem;
+    font-weight: 700;
 } 
+
+
 
 
 /* ***********************   BODY STYLES  ************************** */
 
 #body-container{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 40px 155px 155px 40px 155px 155px;
-    padding-top: 3.5rem;
+    grid-template-columns: repeat(2, 1fr) 300px;
+    grid-template-rows: 40px 155px 165px 60px 155px 155px;
+    padding-top: 2.5rem;
+    background-color: #e2e8f0;
+    box-shadow: inset 0px 8px 6px -3px #7f7f7f51;
+
 }
 
 #projects-title{
     grid-row: 1/2;
     grid-column: 1/2;
+    padding-left: 30px;
+    min-width: 40px;
+
 }
 
 #announc-title{
@@ -181,22 +195,105 @@ font-weight: 600;
 #trending-title{
     grid-row: 4/5;
     grid-column: 4/5;
+    align-self: end;
 }
 
+#projects-title, #announc-title, #trending-title{
+    font-weight: 700;
+    font-size: 1.4rem;
+} 
+
+#trending-title{
+    padding-bottom: 8px;
+}
 
 
 #projects{
     grid-column: 1/4;
     grid-row: 2/7;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
+    grid-template-rows: 210px 210px 210px;
+    justify-items: start;
+    grid-gap: 24px;
+    padding: 0 1.5rem;
+    max-width: 1200px;
 }
+
+
+
+.projects-item {
+    border-radius: 8px;
+    padding: 28px 20px;
+    background-color: #FFF;
+    border-left: 8px solid #f0b429;
+    font-weight: 700;
+    box-shadow: 2px 2px 6px 1px #67676751;
+    max-width: 500px;
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+}
+
+.projects-item img:nth-of-type(1){
+    grid-row: 3/4;
+    grid-column: 2/3;
+}
+.projects-item img:nth-of-type(2){
+    grid-row: 3/4;
+    grid-column: 3/4;
+}
+.projects-item img:nth-of-type(3){
+    grid-row: 3/4;
+    grid-column: 4/5;
+}
+
+.projects-item > h4{
+    font-weight: 700;
+    font-size: 1.1rem;
+    align-self: end;
+}
+
+.projects-item > p{
+    color: #636363;
+    font-size: .9rem;
+    max-width: 280px;
+    grid-column: 1/4;
+    grid-row: 2/3;
+}
+
+
+/*************************   ANNOUNCEMENTS/TRENDING STYLES   ************************/
 
 #announcements{
     grid-column: 4/5;
     grid-row: 2/4;
+    background-color: #FFF;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 6px 1px #67676751;
+    margin-right: 30px;
+    max-width: 300px;
+
+}
+
+#announcement-item{
+    padding: 12px 0; 
+    border-bottom: 2px solid #7f7f7f51;
+}
+
+#announcement-item:last-of-type{
+    border-bottom: hidden;
+    padding-bottom: 30px;
+}
+
+#announcement-item > h4{
+    font-weight: 700;
+    font-size: .9rem;
+
+}
+#announcement-item > p{
+    font-size: .75rem;
 
 }
 
@@ -206,10 +303,22 @@ font-weight: 600;
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+    background-color: #FFF;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 6px 1px #67676751;
+    margin-right: 30px;
+    max-width: 300px;
 }
 
+#trending-title{
+}
 
 #trending-profile{
     padding-top: 16px;
     padding-left: 8px;
+}
+
+#trending-profile > h4{
+    font-weight: 500;
 }
